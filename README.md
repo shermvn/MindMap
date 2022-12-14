@@ -1,0 +1,4 @@
+# Mind Map
+## Session One
+### I started off with listed items I would need to model and then thinking of some functional ideas i think could work from working in max. The models where generally easy to make. I used generally simple texures because it seems like A-frame is Lofi aesthically. Before starting the code I made a playlist of videos that could help me through the process. This allowed me to know that i needed Xmapp. Currently I am using VScode and GLitch to prototype. I started by modifering ther generic webvr patch. From there, I added in an gltf model. There was some problems with this. Originally i useed obj but i could not get tghem to work and then i saw on Aframe that gltf work better so i used that. However this I didnt delete the code, edited, and the lead to some syntaxt problems.
+![Screen Shot 2022-12-08 at 12.48.53 PM](/Applications/XAMPP/xamppfiles/htdocs/AFrame)
