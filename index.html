@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>hover</title>
-    <meta name="description" content="hover" />
+    <title>Mind Map</title>
+    <meta name="description" content="Lmsc261 Final" />
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
     <!--     <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script> -->
@@ -19,10 +20,39 @@
             if (method == "play") {
               speaker.components.sound.playSound();
             }
-            if (method == "pause") {
-              speaker.components.sound.pauseSound();
-            }
             if (method == "stop") {
+              speaker.components.sound.stopSound();
+            }
+          });
+        },
+      });
+      AFRAME.registerComponent("soundcontroller2", {
+        init: function () {
+          let controlButton = this.el;
+          controlButton.addEventListener("click", function (ev) {
+            let method = ev.srcElement.id;
+            console.log(method);
+            let speaker = document.querySelector("#sup2");
+            if (method == "play2") {
+              speaker.components.sound.playSound();
+            }
+            if (method == "stop2") {
+              speaker.components.sound.stopSound();
+            }
+          });
+        },
+      });
+      AFRAME.registerComponent("soundcontroller3", {
+        init: function () {
+          let controlButton = this.el;
+          controlButton.addEventListener("click", function (ev) {
+            let method = ev.srcElement.id;
+            console.log(method);
+            let speaker = document.querySelector("#sup3");
+            if (method == "play3") {
+              speaker.components.sound.playSound();
+            }
+            if (method == "stop3") {
               speaker.components.sound.stopSound();
             }
           });
@@ -32,10 +62,93 @@
     <a-scene school playgroud>
       <a-assets>
         <audio
-          id="test"
-          src="https://cdn.glitch.me/9e39bce0-8d6c-4a49-968c-6b5bff2c2001/yuki%20dangerous%20IG%20vox.wav?v=1671031758113"
+          id="Kindling"
+          src="https://cdn.glitch.me/2b749716-2fad-4755-a96b-8bbc85acb965/KINDLING%20M%26M.mp3?v=1671099600238"
         ></audio>
-        <a-assest-item id="build" src="https://cdn.glitch.me/2b749716-2fad-4755-a96b-8bbc85acb965/buildd%201214(gtlf%20export).gltf?v=1671055428798"></a-assest-item>
+        <audio
+          id="LDNP"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/long%20day%20no%20poon%20edit.mp3?v=1671099603701"
+        ></audio>
+        <audio
+          id="NZB"
+          src="https://cdn.glitch.me/2b749716-2fad-4755-a96b-8bbc85acb965/new%20zack%20beat.wav?v=1671086438944"
+        ></audio>
+
+        <video
+          id="SBB"
+          webkit-playsinline
+          loop="true"
+          src="https://cdn.glitch.me/2b749716-2fad-4755-a96b-8bbc85acb965/starbornbaby%20low%20res.mov?v=1671088429086"
+        ></video>
+        <img
+          id="BG"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/IMG_1295.JPG?v=1671093915198"
+        />
+
+        <a-assest-item
+          id="zpick"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/zpick.gltf?v=1671085652520"
+        ></a-assest-item>
+        <a-assest-item
+          id="room"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/room.gltf?v=1671096545724"
+        ></a-assest-item>
+        <a-assest-item
+          id="wardwh"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/wardwhl.gltf?v=1671072876525"
+        ></a-assest-item>
+        <a-assest-item
+          id="wardbl"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/wardbl.gltf?v=1671072941878"
+        ></a-assest-item>
+        <a-assest-item
+          id="nugget"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/nugget.gltf?v=1671072949337"
+        ></a-assest-item>
+        <a-assest-item
+          id="speakers"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/speakers.gltf?v=1671072954544"
+        ></a-assest-item>
+        <a-assest-item
+          id="gorillas"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/gorillas.gltf?v=1671072981827"
+        ></a-assest-item>
+        <a-assest-item
+          id="biglamp"
+          src="https://cdn.glitch.me/2b749716-2fad-4755-a96b-8bbc85acb965/biglamp.gltf?v=1671072996607"
+        ></a-assest-item>
+        <a-assest-item
+          id="513funko"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/513funko.gltf?v=1671073495187"
+        ></a-assest-item>
+        <a-assest-item
+          id="redcab"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/redcab.gltf?v=1671073000797"
+        ></a-assest-item>
+        <a-assest-item
+          id="matt"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/matt.gltf?v=1671073010397"
+        ></a-assest-item>
+        <a-assest-item
+          id="bed"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/bed.gltf?v=1671073837561"
+        ></a-assest-item>
+        <a-assest-item
+          id="laptop"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/laptop.gltf?v=1671074463217"
+        ></a-assest-item>
+        <a-assest-item
+          id="flowerrug"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/flowerrug.gltf?v=1671087639307"
+        ></a-assest-item>
+        <a-assest-item
+          id="zionposter"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/zion%20poster.gltf?v=1671095444796"
+        ></a-assest-item>
+        <a-assest-item
+          id="spposter"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/SP%20poster.gltf?v=1671096357040"
+        ></a-assest-item>
       </a-assets>
       <a-camera>
         <a-entity
@@ -49,50 +162,133 @@
           animation__reset="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; startEvents:mouseleave;"
         ></a-entity>
       </a-camera>
-      <a-gltf-model 
-      src="#build"
+      <a-gltf-model src="#room" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model src="#bed" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model src="#wardbl" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model src="#wardwh" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model
+        src="#nugget"
+        scale="4 4 4"
+        class="clickable"
+        animation__mouseenter="property: position; from: 0 0 0; to: 2 2 2; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: position; from: 2 2 2; to: 0 0 0; startEvents: mouseleave; dur: 500"
       ></a-gltf-model>
-      <a-entity
+      <a-gltf-model
+        src="#speakers"
+        scale="4 4 4"
         id="sup"
         class="clickable"
-        geometry="primitive: cylinder"
-        material="color: red"
-        position="0 0 0"
-        sound="src: #test; autoplay: true"
-      ></a-entity>
+        sound="src:#LDNP; autoplay: false"
+      ></a-gltf-model>
+      <a-gltf-model src="#gorillas" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model
+        src="#biglamp"
+        scale="4 4 4"
+        class="clickable"
+      ></a-gltf-model>
+      <a-gltf-model src="#513funko" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model src="#redcab" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model
+        src="#matt"
+        scale="4 4 4"
+      ></a-gltf-model>
+      <a-gltf-model
+        id="sup2"
+        src="#zpick"
+        scale="4 4 4"
+        class="clickable"
+        position="0.322 0.044 0"
+        animation__posup="property: position; from: 0.322 0.044 0; to: 3.454 0.044 0; startEvents: mouseenter; dur: 500"
+        sound="src:#NZB; autoplay: false"
+      ></a-gltf-model>
+      <a-gltf-model src="#laptop" scale="4 4 4"></a-gltf-model>
+       <a-gltf-model
+        id="sup3"
+        src="#spposter"
+        scale="4 4 4"
+        sound="src:#Kindling; autoplay: false"
+      ></a-gltf-model>
+      <a-gltf-model src="#zionposter" scale="4 4 4"></a-gltf-model>
+      <a-sky color="black"></a-sky>
       <a-entity
         id="play"
         class="clickable"
-        geometry="primitive: box"
-        material="color: red"
-        position="0 1.5 -3"
+        geometry="primitive: sphere"
+        material="color: green"
+        position="7.122 4.094 -6.767"
+        scale="0.5 0.5 0.5"
         animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 2000; startEvents: click"
-        animation__mouseenter="property: components.material.material.color; type: color; from: red; to: blue; startEvents: mouseenter; dur: 500"
-        animation__mouseleave="property: components.material.material.color; type: color; from: blue; to: red; startEvents: mouseleave; dur: 500"
-        soundcontroller
-      ></a-entity>
-      <a-entity
-        id="pause"
-        class="clickable"
-        geometry="primitive: box"
-        material="color: yellow"
-        position="-1.5 1.5 -3"
-        animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 2000; startEvents: click"
-        animation__mouseenter="property: components.material.material.color; type: color; from: yellow; to: blue; startEvents: mouseenter; dur: 500"
-        animation__mouseleave="property: components.material.material.color; type: color; from: blue; to: yellow; startEvents: mouseleave; dur: 500"
+        animation__mouseenter="property: components.material.material.color; type: color; from: green; to: white; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: components.material.material.color; type: color; from: white; to: green; startEvents: mouseleave; dur: 500"
         soundcontroller
       ></a-entity>
       <a-entity
         id="stop"
         class="clickable"
-        geometry="primitive: box"
-        material="color: black"
-        position="1.5 1.5 -3"
+        geometry="primitive: sphere"
+        material="color: red"
+        position="8.368 4.094 -6.767"
+        scale="0.5 0.5 0.5"
         animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 2000; startEvents: click"
-        animation__mouseenter="property: components.material.material.color; type: color; from: black; to: blue; startEvents: mouseenter; dur: 500"
-        animation__mouseleave="property: components.material.material.color; type: color; from: blue; to: black; startEvents: mouseleave; dur: 500"
+        animation__mouseenter="property: components.material.material.color; type: color; from: red; to: black; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: components.material.material.color; type: color; from: red; to: black; startEvents: mouseleave; dur: 500"
         soundcontroller
+      ></a-entity
+      ><a-entity
+        id="play2"
+        class="clickable"
+        geometry="primitive: sphere"
+        material="color: green"
+        position="-7.796 0.762 4.116"
+        scale="0.5 0.5 0.5"
+        animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 2000; startEvents: click"
+        animation__mouseenter="property: components.material.material.color; type: color; from: green; to: white; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: components.material.material.color; type: color; from: white; to: green; startEvents: mouseleave; dur: 500"
+        soundcontroller2
       ></a-entity>
+      <a-entity
+        id="stop2"
+        class="clickable"
+        geometry="primitive: sphere"
+        material="color: red"
+        position="-7.796 0.762 2.928"
+        scale="0.5 0.5 0.5"
+        animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 2000; startEvents: click"
+        animation__mouseenter="property: components.material.material.color; type: color; from: red; to: black; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: components.material.material.color; type: color; from: red; to: black; startEvents: mouseleave; dur: 500"
+        soundcontroller2
+      ></a-entity
+      ><a-entity
+        id="play3"
+        class="clickable"
+        geometry="primitive: sphere"
+        material="color: green"
+        position="18.392 1 -5.966"
+        scale="0.5 0.5 0.5"
+        animation__mouseenter="property: components.material.material.color; type: color; from: green; to: white; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: components.material.material.color; type: color; from: white; to: green; startEvents: mouseleave; dur: 500"
+        soundcontroller3
+      ></a-entity>
+      <a-entity
+        id="stop3"
+        class="clickable"
+        geometry="primitive: sphere"
+        material="color: red"
+        position="18.392 1 -4.802"
+        scale="0.5 0.5 0.5"
+        animation__mouseenter="property: components.material.material.color; type: color; from: red; to: black; startEvents: mouseenter; dur: 500"
+        animation__mouseleave="property: components.material.material.color; type: color; from: red; to: black; startEvents: mouseleave; dur: 500"
+        soundcontroller3
+      ></a-entity>
+      <a-curvedimage
+        src="#BG"
+        height="3.0"
+        radius="5.7"
+        theta-length="-120"
+        rotation="0 -29 0"
+        position="21.289 10.379 -0.859"
+        scale="7 7 7"
+      ></a-curvedimage>
     </a-scene>
   </body>
 </html>
