@@ -1,5 +1,5 @@
 # [MIND MAP](https://mindmapz.glitch.me/#)
-![](Assets/Photos/mindmapimg.jpg)
+- ![](Assets/Photos/mindmapimg.jpg)
 
 ## Instructions:
 - Open Website on Google Chrome
