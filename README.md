@@ -23,6 +23,7 @@
 - Since about everything was generally there but I was generally underwhelmed, I decided I wanted to add adjusting lights with the music, yet did not have the time or patience to implement this. During this whole process, I ignored the fact that I said in my proposal I would have a mobile verison. So thursday morning before class, i tried to implement this. I had to add some cases for Safari and mobile audio and joysticks. Neither of these worked, with the information and time I had, joysticks images appeared but wouldn't move. Fast forward to class, I enjoy branding so i decided to using a model of me holding my head as the cover page of the presentation and the favicon of the website.
 - ###### If you read all of this, pat yourself on the back. Great Job! Also is you "hating" on MAX similar to most of Berklee hating ProTools. Gotta love a good analogy. There also should be like grammarly for vscode. That would be clean.
  
+ ###### "Macbook Pro 13 inch 2020" (https://skfb.ly/onozJ) by timblewee is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 
 
