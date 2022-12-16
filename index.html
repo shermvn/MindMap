@@ -155,11 +155,12 @@
           id="mouseCursor"
           raycaster="objects:.clickable"
           cursor="fuse: true; fuseTimeout:2000"
-          geometry="primitive: box; width: 0.1; heigth: 0.1; depth: 0.1;"
-          material="color: green;"
+          geometry="primitive: box;"
+          material="color: orange;"
           position="0 0 -2"
-          animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; startEvents:fusing;"
-          animation__reset="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; startEvents:mouseleave;"
+          scale= "0.3 0.3 0.3;"
+          animation__fusing="property: scale; from: 0.3 0.3 0.3; to: 0.1 0.1 0.1; startEvents:fusing;"
+          animation__reset="property: scale; from: 0.1 0.1 0.1; to: 0.3 0.3 0.3; startEvents:mouseleave;"
         ></a-entity>
       </a-camera>
       <a-gltf-model src="#room" scale="4 4 4"></a-gltf-model>
