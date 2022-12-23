@@ -7,59 +7,68 @@
     <script src="https://unpkg.com/aframe-play-sound-on-event@1.0.2/dist/aframe-play-sound-on-event.min.js"></script>
     <!--     <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script> -->
     <!--     <link rel="stylesheet" href="style.css" /> -->
+    <!--     <script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"></script> -->
+    <script src="../../js/info-message.js"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/mindmapimg.jpg?v=1671132155538"
+    />
   </head>
+  <h1>SHERMVN</h1>
+  <style></style>
+  <script>
+    AFRAME.registerComponent("soundcontroller", {
+      init: function () {
+        let controlButton = this.el;
+        controlButton.addEventListener("click", function (ev) {
+          let method = ev.srcElement.id;
+          console.log(method);
+          let speaker = document.querySelector("#sup");
+          if (method == "play") {
+            speaker.components.sound.playSound();
+          }
+          if (method == "stop") {
+            speaker.components.sound.stopSound();
+          }
+        });
+      },
+    });
+    AFRAME.registerComponent("soundcontroller2", {
+      init: function () {
+        let controlButton = this.el;
+        controlButton.addEventListener("click", function (ev) {
+          let method = ev.srcElement.id;
+          console.log(method);
+          let speaker = document.querySelector("#sup2");
+          if (method == "play2") {
+            speaker.components.sound.playSound();
+          }
+          if (method == "stop2") {
+            speaker.components.sound.stopSound();
+          }
+        });
+      },
+    });
+    AFRAME.registerComponent("soundcontroller3", {
+      init: function () {
+        let controlButton = this.el;
+        controlButton.addEventListener("click", function (ev) {
+          let method = ev.srcElement.id;
+          console.log(method);
+          let speaker = document.querySelector("#sup3");
+          if (method == "play3") {
+            speaker.components.sound.playSound();
+          }
+          if (method == "stop3") {
+            speaker.components.sound.stopSound();
+          }
+        });
+      },
+    });
+  </script>
   <body>
-    <script>
-      AFRAME.registerComponent("soundcontroller", {
-        init: function () {
-          let controlButton = this.el;
-          controlButton.addEventListener("click", function (ev) {
-            let method = ev.srcElement.id;
-            console.log(method);
-            let speaker = document.querySelector("#sup");
-            if (method == "play") {
-              speaker.components.sound.playSound();
-            }
-            if (method == "stop") {
-              speaker.components.sound.stopSound();
-            }
-          });
-        },
-      });
-      AFRAME.registerComponent("soundcontroller2", {
-        init: function () {
-          let controlButton = this.el;
-          controlButton.addEventListener("click", function (ev) {
-            let method = ev.srcElement.id;
-            console.log(method);
-            let speaker = document.querySelector("#sup2");
-            if (method == "play2") {
-              speaker.components.sound.playSound();
-            }
-            if (method == "stop2") {
-              speaker.components.sound.stopSound();
-            }
-          });
-        },
-      });
-      AFRAME.registerComponent("soundcontroller3", {
-        init: function () {
-          let controlButton = this.el;
-          controlButton.addEventListener("click", function (ev) {
-            let method = ev.srcElement.id;
-            console.log(method);
-            let speaker = document.querySelector("#sup3");
-            if (method == "play3") {
-              speaker.components.sound.playSound();
-            }
-            if (method == "stop3") {
-              speaker.components.sound.stopSound();
-            }
-          });
-        },
-      });
-    </script>
-    <a-scene school playgroud>
+    <a-scene>
       <a-assets>
         <audio
           id="Kindling"
@@ -84,7 +93,6 @@
           id="BG"
           src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/IMG_1295.JPG?v=1671093915198"
         />
-
         <a-assest-item
           id="zpick"
           src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/zpick.gltf?v=1671085652520"
@@ -149,7 +157,16 @@
           id="spposter"
           src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/SP%20poster.gltf?v=1671096357040"
         ></a-assest-item>
+        <a-assest-item
+          id="cur"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/cursor.gltf?v=1671133342729"
+        ></a-assest-item>
+        <a-assest-item
+          id="burger"
+          src="https://cdn.glitch.global/2b749716-2fad-4755-a96b-8bbc85acb965/burger%20stool.gltf?v=1671133658561"
+        ></a-assest-item>
       </a-assets>
+      <!-- Camera -->
       <a-camera>
         <a-entity
           id="mouseCursor"
@@ -157,11 +174,28 @@
           cursor="fuse: true; fuseTimeout:2000"
           geometry="primitive: box;"
           material="color: orange;"
-          position="0 0 -2"
-          scale= "0.3 0.3 0.3;"
+          position="0 0.284 -2.498"
+          scale="0.3 0.3 0.3;"
           animation__fusing="property: scale; from: 0.3 0.3 0.3; to: 0.1 0.1 0.1; startEvents:fusing;"
           animation__reset="property: scale; from: 0.1 0.1 0.1; to: 0.3 0.3 0.3; startEvents:mouseleave;"
         ></a-entity>
+        <a-plane
+          position="-2.08 -1.63414 -2"
+          material="color: red; opacity: 0.5"
+          geometry="height: 0.13; width: 1.7"
+          id="Info Background"
+        ></a-plane>
+        <a-text
+          position="-2.81114 -1.57027 -1.93381"
+          text="width: 1.62; value: To navigate: W= Forward A= Right S= Back D= Left; color: #000000; tabSize: 3.55; alphaTest: 1; transparent: false; whiteSpace: nowrap"
+          id="Nav info"
+        ></a-text>
+        <a-gltf-model
+          src="#cur"
+          scale="0.1 0.1 0.1"
+          rotation="0 -90 -30"
+          position="0 0 -2"
+        ></a-gltf-model>
       </a-camera>
       <a-gltf-model src="#room" scale="4 4 4"></a-gltf-model>
       <a-gltf-model src="#bed" scale="4 4 4"></a-gltf-model>
@@ -171,21 +205,23 @@
         src="#nugget"
         scale="4 4 4"
         class="clickable"
-        animation__mouseenter="property: position; from: 0 0 0; to: 2 2 2; startEvents: mouseenter; dur: 500"
-        animation__mouseleave="property: position; from: 2 2 2; to: 0 0 0; startEvents: mouseleave; dur: 500"
+        animation__mouseenter="property: position; from: 0 0 0; to: 0 5 0; startEvents: mouseenter; dur: 1000"
       ></a-gltf-model>
-      <a-gltf-model
-        src="#speakers"
-        scale="4 4 4"
-      ></a-gltf-model>
+      <a-gltf-model src="#speakers" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model src="#flowerrug" scale="4 4 4"></a-gltf-model>
       <a-entity
-        id= "sup"
+        id="sup"
         class="clickable"
         sound="src:#LDNP; autoplay: false; volume: 1.2"
         scale="4 4 4"
-        position="8.091 1.489 -4.438"      
+        position="8.091 1.489 -4.438"
       ></a-entity>
-      <a-gltf-model src="#gorillas" scale="4 4 4"></a-gltf-model>
+      <a-gltf-model
+        src="#gorillas"
+        scale="4 4 4"
+        position="-0.450 0 0"
+      ></a-gltf-model>
+      <a-gltf-model src="#burger" scale="4 4 4"></a-gltf-model>
       <a-gltf-model
         src="#biglamp"
         scale="4 4 4"
@@ -197,27 +233,25 @@
       <a-gltf-model
         src="#zpick"
         scale="4 4 4"
+        class="clickable"
         position="0.322 0.044 0"
         animation__posup="property: position; from: 0.322 0.044 0; to: 3.454 0.044 0; startEvents: mouseenter; dur: 500"
       ></a-gltf-model>
-       <a-entity
-        id= "sup2"
+      <a-entity
+        id="sup2"
         class="clickable"
-         sound="src:#NZB; autoplay: false; volume: 1.2"
+        sound="src:#NZB; autoplay: false; volume: 1.2"
         scale="4 4 4"
-        position="-1.163 1.489 3.239d"      
+        position="-1.163 1.489 3.239d"
       ></a-entity>
       <a-gltf-model src="#laptop" scale="4 4 4"></a-gltf-model>
-      <a-gltf-model
-        src="#spposter"
-        scale="4 4 4"
-      ></a-gltf-model>
-        <a-entity
-        id= "sup3"
+      <a-gltf-model src="#spposter" scale="4 4 4"></a-gltf-model>
+      <a-entity
+        id="sup3"
         class="clickable"
         sound="src:#Kindling; autoplay: false; volume: 1.2"
         scale="4 4 4"
-        position="13.669 1.489 -1.72106"      
+        position="13.669 1.489 -1.72106"
       ></a-entity>
       <a-gltf-model src="#zionposter" scale="4 4 4"></a-gltf-model>
       <a-sky color="black"></a-sky>
